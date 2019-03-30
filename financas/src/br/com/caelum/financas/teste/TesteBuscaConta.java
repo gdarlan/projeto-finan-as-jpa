@@ -11,16 +11,19 @@ public class TesteBuscaConta {
 
 		EntityManager em = new JPAUtil().getEntityManager();
 		em.getTransaction().begin();
-		
+
 		Conta conta = em.find(Conta.class, 1);
-		
-		conta.setTitular("João");
-		conta.setAgencia("123");
 		System.out.println(conta.getTitular());
+		System.out.println(conta.getNumero());
 		
-		em.getTransaction().commit();
-		em.close();
 		
+		/*
+		 * conta.setTitular("João"); conta.setAgencia("123");
+		 * System.out.println(conta.getTitular());
+		 * 
+		 * em.getTransaction().commit(); em.close();
+		 */
+
 //		EntityManager em2 = new JPAUtil().getEntityManager();
 //		em2.getTransaction().begin();
 //		
@@ -30,9 +33,6 @@ public class TesteBuscaConta {
 //		
 //		em2.getTransaction().commit();
 //		em2.close();		
-		
-		
-		
-		
+
 	}
 }
